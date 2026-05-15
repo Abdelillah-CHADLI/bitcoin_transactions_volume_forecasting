@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+  body {
+    font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+    background:
+      radial-gradient(1200px 600px at 80% -10%, rgba(247, 147, 26, 0.12), transparent 60%),
+      radial-gradient(900px 500px at 0% 110%, rgba(56, 189, 248, 0.08), transparent 60%),
+      #0b1020;
+  }
+}
+
+@layer components {
+  .card {
+    @apply rounded-2xl border border-white/5 bg-white/[0.03] backdrop-blur-sm shadow-xl shadow-black/20;
+  }
+  .card-pad {
+    @apply p-5 sm:p-6;
+  }
+  .stat-label {
+    @apply text-[11px] uppercase tracking-wider text-slate-400 font-medium;
+  }
+  .stat-value {
+    @apply text-2xl font-semibold text-slate-50 font-mono tabular-nums;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-colors disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn-primary {
+    @apply btn bg-bitcoin text-black hover:bg-amber-500;
+  }
+  .btn-ghost {
+    @apply btn bg-white/5 text-slate-100 hover:bg-white/10 border border-white/10;
+  }
+  .input {
+    @apply w-full rounded-lg bg-white/5 border border-white/10 px-3 py-2 text-sm text-slate-100 focus:outline-none focus:ring-2 focus:ring-bitcoin/60;
+  }
+  .badge {
+    @apply inline-flex items-center gap-1 rounded-md px-2 py-0.5 text-[11px] font-medium;
+  }
+  .badge-good {
+    @apply badge bg-emerald-500/15 text-emerald-300 border border-emerald-500/30;
+  }
+  .badge-bad {
+    @apply badge bg-rose-500/15 text-rose-300 border border-rose-500/30;
+  }
+  .badge-warn {
+    @apply badge bg-amber-500/15 text-amber-300 border border-amber-500/30;
+  }
+}

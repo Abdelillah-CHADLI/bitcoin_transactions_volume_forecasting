@@ -1,0 +1,8 @@
+fastapi>=0.115
+uvicorn[standard]>=0.30
+statsmodels>=0.14.4
+pandas>=2.2
+numpy>=2.1
+scipy>=1.14
+requests>=2.32
+pydantic>=2.9
